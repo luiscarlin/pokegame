@@ -1,16 +1,12 @@
 import React, {useEffect} from 'react';
 import {SafeAreaView, Text} from 'react-native';
 import Pokedex from 'pokedex-promise-v2';
-// import Pokedex from 'pokeapi-js-wrapper';
-// const P = new Pokedex.Pokedex();
 
 function App() {
   useEffect(() => {
     const P = new Pokedex();
 
-    console.log('hello');
-
-    P.getPokemonByName('eevee')
+    P.getPokemonsList()
       .then(response => console.log(response))
       .catch(console.log);
   }, []);
